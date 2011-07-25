@@ -298,14 +298,19 @@ module Vpim
   end
 
   def Vpim.encode_paramvalue(value)
-    case value
-    when %r{\A#{Bnf::SAFECHAR}*\z}
-      value
-    when %r{\A#{Bnf::QSAFECHAR}*\z}
-      '"' + value + '"'
-    else
-      raise Vpim::Unencodeable, "param-value #{value.inspect}"
-    end
+    # the regular expressions SAFECHAR and QSAFECHAR are not Ruby 1.9.x friendly
+    # can't figure out what they should be so safest route is to always assume
+    # values sent here need to be placed into double quotes.
+    '"' + value + '"'
+    
+    #case value
+    #when %r{\A#{Bnf::SAFECHAR}*\z}
+    #  value
+    #when %r{\A#{Bnf::QSAFECHAR}*\z}
+    #  '"' + value + '"'
+    #else
+    #  raise Vpim::Unencodeable, "param-value #{value.inspect}"
+    #end
   end
 
 
