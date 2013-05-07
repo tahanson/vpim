@@ -77,9 +77,7 @@ module Vpim
       %w{each name displayed encode}.each{|m| remove_method m}
 
       def file_each(file, klass, &block) #:nodoc:
-        unless iterator?
-          return Enumerable::Enumerator.new(self, :each, klass)
-        end
+        return self.enum_for(:each, klass) unless iterator?
 
         cals = open(file) do |io|
           Vpim::Icalendar.decode(io)
@@ -127,9 +125,7 @@ module Vpim
         end
 
         def each(klass=nil, &block) #:nodoc:
-          unless iterator?
-            return Enumerable::Enumerator.new(self, :each, klass)
-          end
+          return self.enum_for(:each, klass) unless iterator?
           Dir[ @dir + "/Events/*.ics" ].map do |ics|
             file_each(ics, klass, &block)
           end
@@ -216,9 +212,7 @@ module Vpim
         end
 
         def each(klass, &block) #:nodoc:
-          unless iterator?
-            return Enumerable::Enumerator.new(self, :each, klass)
-          end
+          return self.enum_for(:each, klass) unless iterator?
 
           cals = Vpim::Icalendar.decode(encode)
 

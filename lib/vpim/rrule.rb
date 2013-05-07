@@ -126,7 +126,7 @@ module Vpim
     # Return an Enumerable, it's #each() will yield over all occurrences up to
     # (and not including) time +dountil+.
     def each_until(dountil)
-      Vpim::Enumerator.new(self, dountil)
+      self.enum_for(:each, dountil)
     end
 
     # Yields for each +ytime+ in the recurring set of events.

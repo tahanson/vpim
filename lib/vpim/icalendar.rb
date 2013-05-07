@@ -357,9 +357,7 @@ TODO
     # This skips components that are only internally meaningful to iCalendar,
     # such as timezone definitions.
     def each(klass=nil, &block) # :yield: component
-      unless block
-        return Enumerable::Enumerator.new(self, :each, klass)
-      end
+      return self.enum_for(:each, klass) unless block
       components(klass, &block)
     end
 

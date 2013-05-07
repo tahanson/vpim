@@ -16,9 +16,7 @@ module Vpim
     # View only events occuring in the next week.
     module Week
       def each(klass = nil) #:nodoc:
-        unless block_given?
-          return Enumerable::Enumerator.new(self, :each, klass)
-        end
+        return self.enum_for(:each, klass) unless block_given?
 
         t0 = Time.new.to_a
         t0[0] = t0[1] = t0[2] = 0 # sec,min,hour = 0
@@ -32,9 +30,7 @@ module Vpim
         # there.
         occurrences.module_eval(<<"__", __FILE__, __LINE__+1)
           def occurrences(dountil=nil)
-            unless block_given?
-              return Enumerable::Enumerator.new(self, :occurrences, dountil)
-            end
+            return self.enum_for(:occurrences, dountil) unless block_given?
             super(dountil) do |t|
               t0 = Time.at(#{t0.to_i})
               t1 = Time.at(#{t1.to_i})

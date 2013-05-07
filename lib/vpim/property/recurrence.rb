@@ -35,9 +35,7 @@ module Vpim
         # iterations, see Rrule#each.
         def occurrences(dountil = nil, &block) #:yield: occurrence time
           rr = rrule
-          unless block_given?
-            return Enumerable::Enumerator.new(self, :occurrences, dountil)
-          end
+          return self.enum_for(:occurrences, dountil) unless block_given?
 
           rr.each(dountil, &block)
         end
