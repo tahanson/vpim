@@ -1,0 +1,27 @@
+PATH
+  remote: .
+  specs:
+    vpim (0.7.0)
+      plist
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    git (1.2.5)
+    jeweler (1.8.4)
+      bundler (~> 1.0)
+      git (>= 1.2.5)
+      rake
+      rdoc
+    json (1.7.7)
+    plist (3.1.0)
+    rake (10.0.4)
+    rdoc (4.0.1)
+      json (~> 1.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  jeweler
+  vpim!

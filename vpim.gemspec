@@ -132,6 +132,9 @@ Gem::Specification.new do |s|
      "test/test_agent_atomize.rb",
      "test/test_date.rb"
   ]
+  
+  s.add_dependency "plist"
+  s.add_development_dependency "jeweler"
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
