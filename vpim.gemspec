@@ -117,19 +117,15 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{vCard and iCalendar support}
   s.test_files = [
-    "test/test_repo.rb",
      "test/test_vcard.rb",
      "test/test_rrule.rb",
-     "test/test_agent_calendars.rb",
      "test/common.rb",
      "test/test_field.rb",
-     "test/test_agent_ics.rb",
      "test/test_misc.rb",
      "test/test_all.rb",
      "test/test_dur.rb",
      "test/test_view.rb",
      "test/test_ical.rb",
-     "test/test_agent_atomize.rb",
      "test/test_date.rb"
   ]
   
