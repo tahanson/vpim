@@ -2,6 +2,7 @@
 
 require 'vpim/vcard'
 require 'test/unit'
+require 'turn'
 require 'date'
 
 require 'pp'

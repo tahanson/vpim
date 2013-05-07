@@ -2,6 +2,7 @@
 
 require 'vpim/duration'
 require 'test/unit'
+require 'turn'
 
 include Vpim
 

@@ -2,6 +2,7 @@
 
 require 'vpim/icalendar'
 require 'test/unit'
+require 'turn'
 
 
 # Sorry for the donkey patching...

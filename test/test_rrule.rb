@@ -5,6 +5,7 @@ ENV['TZ'] = 'EST5EDT'
 require 'vpim/rrule'
 require 'vpim/icalendar'
 require 'test/unit'
+require 'turn'
 
 require 'pp'
 

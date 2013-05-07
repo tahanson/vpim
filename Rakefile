@@ -12,6 +12,7 @@ begin
     gem.authors = ["Sam Roberts"]
     gem.add_dependency "plist"
     gem.add_development_dependency "jeweler"
+    gem.add_development_dependency "turn"
     #gem.add_development_dependency "shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end

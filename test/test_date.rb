@@ -3,6 +3,7 @@
 require 'vpim/date'
 require 'vpim/time'
 require 'test/unit'
+require 'turn'
 
 class TestVpimDate < Test::Unit::TestCase
 

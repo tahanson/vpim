@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'test/unit'
+require 'turn'
 
 require 'vpim/repo'
 require 'vpim/view'

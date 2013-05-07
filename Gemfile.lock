@@ -7,6 +7,7 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
+    ansi (1.4.3)
     git (1.2.5)
     jeweler (1.8.4)
       bundler (~> 1.0)
@@ -18,10 +19,13 @@ GEM
     rake (10.0.4)
     rdoc (4.0.1)
       json (~> 1.4)
+    turn (0.9.6)
+      ansi
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   jeweler
+  turn
   vpim!

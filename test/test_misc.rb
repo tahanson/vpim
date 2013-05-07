@@ -2,6 +2,7 @@
 
 require 'test/unit'
 require 'vpim/version'
+require 'turn'
 
 class TestVpimMisc < Test::Unit::TestCase
 

@@ -1,5 +1,6 @@
 require 'test/unit'
 require 'pp'
+require 'turn'
 
 begin
   require 'rubygems'
