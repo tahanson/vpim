@@ -1,3 +1,4 @@
+# encoding: ASCII-8BIT
 =begin
   Copyright (C) 2008 Sam Roberts
 

@@ -349,7 +349,7 @@ EOF
     src = nil
     dst = nil
     assert_nothing_thrown {
-      src = Vpim.decode(EX_ICAL_1)
+      src = Vpim.decode(EX_ICAL_1.force_encoding("ASCII-8BIT"))
       dst = Vpim.expand(src)
     }
 
