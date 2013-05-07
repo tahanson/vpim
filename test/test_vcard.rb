@@ -691,7 +691,7 @@ END:VCARD
     assert_equal('', card.name.given)
     assert_equal('', card.name.fullname)
 
-    assert_raises(TypeError) do
+    assert_raises(RuntimeError) do # expect that you can't modify a frozen name
       card.name.given = 'given'
     end
 
