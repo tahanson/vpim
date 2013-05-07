@@ -111,7 +111,7 @@ END:VTODO
 END:VCALENDAR
 ___
 
-    cal = Icalendar.decode(icstodo)
+    cal = Icalendar.decode(icstodo).first
     assert_equal(icstodo, cal.to_s)
   end
 
