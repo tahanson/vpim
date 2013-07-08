@@ -95,16 +95,12 @@ Gem::Specification.new do |s|
      "test/calendars/weather.calendar/Events/1205712057-8-1055761864.ics",
      "test/calendars/weather.calendar/Info.plist",
      "test/common.rb",
-     "test/test_agent_atomize.rb",
-     "test/test_agent_calendars.rb",
-     "test/test_agent_ics.rb",
      "test/test_all.rb",
      "test/test_date.rb",
      "test/test_dur.rb",
      "test/test_field.rb",
      "test/test_ical.rb",
      "test/test_misc.rb",
-     "test/test_repo.rb",
      "test/test_rrule.rb",
      "test/test_vcard.rb",
      "test/test_view.rb",
@@ -143,3 +139,4 @@ Gem::Specification.new do |s|
   else
   end
 end
+
